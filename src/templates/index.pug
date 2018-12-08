@@ -1,0 +1,109 @@
+extends _layout/layout
+
+//- Các giá trị mặc định cho trang web
+block variables
+	- var title = 'Home'
+	- var description = 'Description for home page'
+	- var bodyclass = 'home'
+
+//- Phần khai báo body
+block body
+	//- Bạn viết code vào đây nhớ là phải mở đầu bằng section ở mỗi khối
+	section.home-slider
+		.owl-carousel.owl-theme
+			-for(x=1;x<3;x++)
+				.item.text-center
+						img(src="./img/home_slider_"+(x)+".jpg", alt="")
+						.title
+							.container
+								.row
+									.col-md-8.offset-md-2
+										h1 Chúng tôi là FullStack Việt Nam
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis praesentium aut tempore, illo ab esse. Quisquam fugiat quae voluptate dolores nesciunt est architecto
+	section.home-news
+		.container
+			.row
+				.col
+					h2 TIN TỨC
+			.row
+				-for(x=1;x<4;x++)
+					.col-md-4.mb-2.item
+						a(href="#")
+							figure
+								.blockimg
+									img(src="./img/home_news_"+(x)+".jpg", alt="")
+								figcaption
+									h3 Trung tâm đào tạo khẩu nghiệp
+									time 21/05/1997
+									p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto labore tempore quasi qui similique, mollitia
+	section.home-Organization
+		.container
+			.row
+				.col
+					h2 ĐỊNH HƯỚNG PHÁT TRIỂN
+			.row
+				.col-md-3.mb-5.item
+					p 
+						i.fa.fa-floppy-o
+					h3 TUYẾT NHUNG
+					p.nhung Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum nihil eveniet iste! Illum earum fuga minima 
+				.col-md-3.mb-5.item
+					p 
+						i.fa.fa-moon-o
+					h3 TUYẾT NHUNG
+					p.nhung Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum nihil eveniet iste! Illum earum fuga minima
+				.col-md-3.mb-5.item
+					p 
+						i.fa.fa-object-group
+					h3 TUYẾT NHUNG
+					p.nhung Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum nihil eveniet iste! Illum earum fuga minima
+				.col-md-3.mb-5.item
+					p 
+						i.fa.fa-files-o
+					h3 TUYẾT NHUNG
+					p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum nihil eveniet iste! Illum earum fuga minima
+	section.abc
+		.contaner
+			.row
+				.col-md-8.offset-md-2.text-center
+					h4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum accusantium quod culpa at officia necessitatibus sequi tempore aperiam tempora
+					p 
+						a(href="#") XEM THÊM
+	section.home-filter
+		.container
+			.row
+				.col 
+					h2 ĐỊNH HƯỚNG 
+			.row.mb-5
+				.col 
+					ul.nav.justify-content-center
+						li.nav-item.active
+							a.nav-link(href="#") TIN VỊT
+						li.nav-item
+							a.nav-link(href="#") TIN VỊT
+						li.nav-item
+							a.nav-link(href="#") TIN VỊT
+						li.nav-item
+							a.nav-link(href="#") TIN VỊT
+
+			.row
+				- for(x=1;x<4;x++)
+					.col-md-4.mb-4.mb-md-0.item
+						a(href="#")
+							figure
+								.blockimg
+									img(src="./img/home_news_"+x+".jpg", alt="", srcset="")
+	section.home-review
+		.container
+			.row
+				.col.text-center
+					h2 KHÁCH HÀNG NÓI
+			.row
+				.owl-carousel.owl-theme
+					-for(x=0;x<3;x++)
+						.col-md-6.offset-md-3.text-center
+							figure
+								.blockimg
+									img(src="./img/mem.png", alt="")
+								figcaption
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui earum hic quibusdam. Debitis repellat laudantium aspernatur natus, sint est iure accusantium itaque, labore fugit dicta, impedit autem vitae assumenda earum.
